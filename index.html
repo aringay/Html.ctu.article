@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <i class="fab fa-chrome"></i> CTU DANAO
+            </div>
+            <div class="menu">
+                <a href="#home">Home</a>
+                <a href="#articles">Articles</a>
+                <a href="/fav.art.html">Favorite</a>
+                <a href="#contact">Contact</a>
+            </div>
+            <div class="search-container">
+                <input type="text" id="search" placeholder="Search articles..." onkeyup="filterArticles()">
+                <button class="search-btn"><i class="fa fa-search"></i></button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="home">
+        <section class="hero">
+            <h1>Welcome to Cebu Technological University - Danao Campus</h1>
+            <p>Your gateway to the future </p>
+        </section>
+
+        <section id="articles" class="article-section">
+            <h2>CEBU-TECH DANAO</h2>
+            <div class="article-grid" id="articleGrid">
+                <!-- Article Card Template -->
+                <div class="article-card">
+                    <img src="/images/b.jpg" alt="Science">
+                    <h3>CAMPUS HISTORY</h3>
+                    <p class="summary">CTU-DANAO started on June 1994 by virtue of the Danao Municipal Council Resolution naming it " Danao Provincial High School".</p>
+                    <p class="details hidden">
+                        It was then converted into a national vocational secondary school on June 22, 1957, pursuant to Republic Act (R.A.)No. 1907. Its name was changed to Danao National Vocational School, supervised by then Cebu School of Arts and Trades in Cebu City in 1958.
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                <div class="article-card">
+                    <img src="/images/quad.jpg" alt="Technology">
+                    <h3>QUADRANGLE</h3>
+                    <p class="summary">It serves as a gathering area for students.</p>
+                    <p class="details hidden">
+                        The Quadrangle is a central space where the university holds its flag ceremonies, assemblies, and various large-scale events. Its open layout makes it ideal for formal gatherings and community activities on campus.
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                <!-- Add 7 more articles similarly -->
+                <div class="article-card">
+                    <img src="/images/cent.jpg" alt="History">
+                    <h3>CENTRUM</h3>
+                    <p class="summary">A central hub for College of Management and Entrepreneurship.</p>
+                    <p class="details hidden">
+                        The Centrum at Cebu Technological University Danao Campus serves as a hotel-like accommodation for guests attending campus events. It offers comfortable lodging and amenities, providing a welcoming space for visitors during university functions.
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                                <div class="article-card">
+                    <img src="/images/tennis.jpg" alt="Science">
+                    <h3>TENNIS COURT</h3>
+                    <p class="summary">Designated area where tennis is played.</p>
+                    <p class="details hidden">
+                        The Tennis Court provides a specialized area for students and faculty interested in tennis. It supports both recreational play and competitive practice, promoting a diverse sports culture on campus.
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                <div class="article-card">
+                    <img src="/images/gym.jpg" alt="Technology">
+                    <h3>KADASIG GYM</h3>
+                    <p class="summary">Likely a gymnasium named " kadasig"which could host sports activities, academic activities, and sessions.</p>
+                    <p class="details hidden">
+                        The campus gym is a dedicated indoor space for basketball and other sports activities. With its spacious court, it’s a hub for both casual games and competitive tournaments.It might also be used for community or school events.
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                <!-- Add 7 more articles similarly -->
+                <div class="article-card">
+                    <img src="/images/oval.jpg" alt="History">
+                    <h3>SPORTS COMPLEX </h3>
+                    <p class="summary">It's often used for tournaments, training, and various events..</p>
+                    <p class="details hidden">
+                        The Oval is the campus's sports complex, designed for athletic events and outdoor recreational activities. It features a track and field area, encouraging students to participate in sports and physical fitness programs.
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                                                <div class="article-card">
+                    <img src="/images/v.jpg" alt="Science">
+                    <h3>UNIVERSITY VISION</h3>
+                    <p class="summary">CTU aspires to be a "premier, multidisciplinary technological university".</p>
+                    <p class="details hidden">
+                        ...
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                <div class="article-card">
+                    <img src="/images/m.jpg" alt="Technology">
+                    <h3>UNIVERSITY MISSION</h3>
+                    <p class="summary">It primarily provide advanced professional and technical instruction for special purposes, advanced in studies and other technological and professional fields.</p>
+                    <p class="details hidden">
+                        ...
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                <!-- Add 7 more articles similarly -->
+                <div class="article-card">
+                    <img src="/images/g.jpg" alt="History">
+                    <h3>UNIVERSITY GOAL</h3>
+                    <p class="summary">Aims to produce well-equipped students with strong character and comprehensive knowledge.</p>
+                    <p class="details hidden">
+                        ...
+        </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                                                                <div class="article-card">
+                    <img src="/images/1.jpg" alt="Science">
+                    <h3>LAUNCHING</h3>
+                    <p class="summary">The Student ID log in / log out Monitoring.</p>
+                    <p class="details hidden">
+                        The event was attended by distinguished university officials, faculty, staff, and students, all gathered to witness the ribbon-cutting ceremony.The enthusiastic crowd highlighted the importance of this modernization, reflecting the university's commitment to enhancing campus efficiency and security through technological advancements. This initiative marks a forward-thinking approach in campus management.
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                <div class="article-card">
+                    <img src="/images/2.jpg" alt="Technology">
+                    <h3>STUDENT MONITORING</h3>
+                    <p class="summary">This image captures a student at Cebu Technological University - Danao Campus using the newly launched swipe login and logout system.</p>
+                    <p class="details hidden">
+                       The student is seen scanning their school ID on the access terminal, which features a glowing indicator, signifying successful authentication. The setup is part of the university's modernized entry and exit process, ensuring a secure and efficient way to track attendance and campus access. The background is adorned with festive yellow and orange balloons, adding a celebratory vibe to the event, symbolizing a step forward in integrating technology into campus operations.
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                <!-- Add 7 more articles similarly -->
+                <div class="article-card">
+                    <img src="/images/3.jpg" alt="History">
+                    <h3>STUDENT MONITORING</h3>
+                    <p class="summary">The event was marked with a formal ceremony.</p>
+                    <p class="details hidden">
+                       The new system signifies a step towards modernization, ensuring a more efficient way to monitor student and staff entry and exit. This initiative underscores the university's commitment to leveraging technology for better campus management.
+                    </p>
+                    <button class="read-more" onclick="toggleDetails(this)">Read More</button>
+                </div>
+                <!-- Repeat for 6 more articles -->
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <div class="form-container">
+                <h3>Sign In</h3>
+                <form>
+                    <input type="text" placeholder="Username" required>
+                    <input type="password" placeholder="Password" required>
+                    <button type="submit">Sign In</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h4>About Us</h4>
+                <p>We are a platform for sharing university articles.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#articles">Articles</a></li>
+                    <li><a href="/fav.art.html">Favorite</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Follow Us</h4>
+                <p>
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </p>
+            </div>
+        </div>
+        <p class="footer-bottom">© 2024 Cebu Technological University-Danao Campus</p>
+    </footer>
+
+    <script src="/main.js"></script>
+</body>
+</html>
